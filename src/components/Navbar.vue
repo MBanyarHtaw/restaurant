@@ -29,12 +29,14 @@ header h1{
   font-size: 30px;
 }
 header a{
-  color:darkblue;
+  color:rgb(250, 250, 252);
   text-decoration: none;
   margin-left: 48px;
+  font-size: 18px;
 }
 header a.router-link-active{
   color:goldenrod;
   font-weight: bold;
+  border-bottom: 1px solid white;
 }
 </style>
