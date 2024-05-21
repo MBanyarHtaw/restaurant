@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h2>DAGON-MAUNG</h2>
+    <h2>DGM</h2>
     <nav>
         <router-link :to="{name:'home'}">Home</router-link> |
         <router-link :to="{name:'about'}">About</router-link> |
@@ -16,17 +16,25 @@ export default {
 </script>
 
 <style scrope>
-nav {
-  padding: 30px;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin:0 auto;
+  padding: 10px;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+header h2{
+  color:goldenrod;
+  font-size: 30px;
+}
+header a{
+  color:darkblue;
   text-decoration: none;
+  margin-left: 20px;
 }
-
-nav a.router-link-exact-active {
-  color: goldenrod;
+header a.router-link-active{
+  color:goldenrod;
+  font-weight: bold;
 }
 </style>
