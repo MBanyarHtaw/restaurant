@@ -1,9 +1,9 @@
 <template>
   <header>
-    <h2>DGM</h2>
+    <h1>DGM</h1>
     <nav>
         <router-link :to="{name:'home'}">Home</router-link> |
-        <router-link :to="{name:'about'}">About</router-link> |
+        <router-link :to="{name:'menu'}">Menu</router-link> |
         <router-link :to="{name:'contact'}">Contact</router-link> 
   </nav>
   </header>
@@ -24,14 +24,14 @@ header{
   margin:0 auto;
   padding: 10px;
 }
-header h2{
+header h1{
   color:goldenrod;
   font-size: 30px;
 }
 header a{
   color:darkblue;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 header a.router-link-active{
   color:goldenrod;
