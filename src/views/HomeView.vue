@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <div>
-      <h2>Home contnet</h2>
+    <div class="head">
+      <h1>Home contnet</h1>
+      <button @click="changeButton" class="button">{{buttonName}}</button>
     </div>
-    <button @click="changeButton">{{buttonName}}</button>
     <div v-if="showAboutpage">
       <About></About>
     </div>
@@ -30,3 +30,31 @@ export default {
   
 }
 </script>
+<style>
+.head{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px; */
+  margin: 0 auto;
+  align-items: center;
+  max-width: 1200px;
+}
+.button{
+  background-color:rgb(10, 107, 91);
+  color: white;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s; ;
+}
+.button:hover{
+  background-color: #45a049;
+}
+</style>
