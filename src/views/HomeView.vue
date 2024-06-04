@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="head">
-      <h1>Home contnet</h1>
+      <h1>Dagon Maung</h1>
       <button @click="changeButton" class="button">{{buttonName}}</button>
     </div>
     <div v-if="showAboutpage">
