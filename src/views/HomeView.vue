@@ -7,25 +7,25 @@
     <div v-if="showAboutpage">
       <About></About>
     </div>
+      <div v-if="showContentPage">
+        <Content></Content>
+      </div>
   </div>
 </template>
 
 <script>
+import Content from '../components/Content'
 import About from '../components/About'
-import { ref ,computed} from 'vue'
+import buttonChange from "../composition/buttonChange"
+
 export default {
   components: {
+    Content,
     About },
   setup(){
-    let showAboutpage =ref(false);
-    let isActive =ref(false)
-    let changeButton=()=>{
-      showAboutpage.value =! showAboutpage.value;
-      isActive.value =! isActive.value
-    }
-     const buttonName = computed(() => (isActive.value ? 'Close' : 'About Us'));
+    let {showAboutpage,buttonName,changeButton,showContentPage} =buttonChange();
     
-    return {showAboutpage,buttonName,changeButton}
+    return {showAboutpage,buttonName,changeButton,showContentPage}
   }
   
 }
